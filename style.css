@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +16,8 @@ a {
 ul {
     list-style: none;
 }
+
+ /* Parte do cabeçalho */
 
 .conteudo{
   display: flex;
@@ -111,6 +111,8 @@ ul {
     padding: 16px;
 }
 
+/* Parte da foto principal */
+
 #product {
     width: 100%;
     padding: 350px;
@@ -144,6 +146,8 @@ ul {
 #slider img.selected {
   opacity: 1;
 }
+
+/* Parte dos lançamentos  */
 
 .novi {
     background: white;
@@ -179,41 +183,91 @@ ul {
    font-size: 15px;
    padding: 7.5px 40px;
    text-transform: uppercase;
-   margin: 12px 0 12px 850px; 
+   margin: 12px 0 12px 600px; 
 }
 
 .aa:hover {
     color: whitesmoke;
     border: 2.5px solid black;
     background-color: rgb(2, 0, 8);
-    transition: 1s;
+
 }
 
-.teste{
-    display: block;
-}
-.teste1 {
-    margin: 0 auto;
-    
-}
-
-.teste2 {
-     margin: 0 auto;
-    
-}
+/* Foto dos lançamentos  */
 
 .caixa {
     border: 4px solid black;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin: 0 auto;
     justify-content: center;
     margin-top: 30px;
-    max-width: 70%;
+    max-width: 80%;
+    height: 460px;
 
+}
+
+.vai-volta {
+  justify-content: center;
+  text-align: center;
+  margin: 0 30px;
+}
+
+.next-btn {
+    border: none;
+    background: transparent;
+    float: right;
+    margin-top: 160px;
+}
+
+.next-btn img {
+    width: 60px;
+}
+
+.volta-btn {
+    border: none;
+    float: left;
+    background: transparent;
+    margin-top: 160px ;
+}
+
+.volta-btn img {
+    width: 60px;
+    
+}
+
+
+.teste{
+    display: block;
+}
+
+.teste1 {
+    margin: 0 auto;
+    text-align: center;    
+}
+
+.teste1 a {
+    color: black;
+}
+
+.imglancamento {
+    width: 350px;
 }
 
 
 
+.botaolancamento {
+    color: black;
+    background: white;
+    border: 1px solid black;
+    padding: 5px 20px;
+    transition: 1s;
+}
+.botaolancamento:hover {
+    border: 1px solid black;
+    color: white;
+    background:black;
+    padding: 5px 20px;
+}
 
 
