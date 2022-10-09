@@ -1,30 +1,37 @@
-let time = 5000,
-    currentImageIndex = 0,
-    images = document
-                .querySelectorAll("#slider img")
-    max = images.length;  
-    
-function nextImage() {
 
-  images [currentImageIndex]
-    .classList.remove("selected") 
- 
-    currentImageIndex++
+const control = document.querySelectorAll(".control");
 
-    if(currentImageIndex >= max)
-    currentImageIndex = 0
+let currentItem = 0
 
-    images [currentImageIndex]
-         .classList.add("selected")
-}    
- 
-function  start () {
-  setInterval(() => {
-     // troca de imagem
-     nextImage() 
-  }, time)
+const items = document.querySelectorAll(".item");
 
-}
+const maxitem = items.length;
 
-window.addEventListener ("load", start)
+control.forEach((control) => {
+    control.addEventListener("click", () => {
+      const isleft =
+    control.classList.contains("arrow-left");
 
+      if (isleft) {
+        currentItem -= 1 ;
+      } else {
+        currentItem += 1;
+      }
+
+      if (currentItem >= maxitem) {
+        currentItem = 0;
+      }
+
+      if (currentItem < 0) {
+        currentItem = maxitem -1;
+      }
+
+      items.forEach( item =>
+        item.classList.remove('current-item'));
+
+        items[currentItem].scrollIntoView ({
+          inline: "center",
+          behavior: "smooth"
+        })
+    });
+  });
